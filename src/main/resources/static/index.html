@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 1</title>
+
+</head>
+<style>
+    .hele-bestillingssiden{
+        border: solid blue 2px;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 5px;
+    }
+
+    #antallInput{
+        width: 30px;
+    }
+
+    .kontaktInfo{
+        display: table;
+    }
+    .kontaktInfo label{
+        display: table-cell;
+        padding-right: 10px;
+    }
+    .kontaktInfo input{
+        display: table-cell;
+    }
+    .kontaktInfo p{
+        display: table-row;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="hele-bestillingssiden">
+        <h1>Bestilling av kinobilletter</h1>
+        <div>Velg film: <select id="filmvelger" required>
+            <option disabled selected hidden value="Velg film her">Velg film her</option>
+            <option value="Max Manus">Max Manus</option>
+            <option value="Mulan">Mulan</option>
+            <option value="Haisommer">Haisommer</option>
+            <option value="Gudfaren">Gudfaren</option>
+        </select></div>
+        <br>
+        <p>Antall <input id="antallInput" type="number"></p>
+        <br>
+        <div class="kontaktInfo">
+            <p>
+                <label for="fornavnInput">Fornavn</label>
+                <input id="fornavnInput" type="text">
+            </p>
+            <p>
+                <label for="etternavnInput">Etternavn</label>
+                <input id="etternavnInput" type="text">
+            </p>
+            <p>
+                <label for="telefonnrInput">Telefonnr</label>
+                <input id="telefonnrInput" type="number">
+            </p>
+            <p>
+                <label for="epostInput">Epost</label>
+                <input id="epostInput" type="email">
+            </p>
+        </div>
+        <button onclick="kjopBillett()">Kjøp billett</button>
+        <div id="billettVisning">
+            <h3>Alle billetter</h3>
+        </div>
+        <button id="slettBilletterKnapp">Slett alle billettene</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
